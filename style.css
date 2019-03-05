@@ -29,6 +29,12 @@
   text-align: center;
 }
 
+.grid-item {
+  align-items: center;
+  display: grid;
+  justify-items: center;
+}
+
 #grid-img {
   width: 300px;
   -moz-transition: all 0.5s ease-out;
@@ -36,10 +42,12 @@
   -webkit-transition: all 0.5s ease-out;
 }
 
+#grid-im {
+  width: 300px;
+}
+
 #grid-img:hover {
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -o-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .gridik {
@@ -57,9 +65,22 @@
   margin-top: 10px;
 }
 
+.text-h5 {
+  text-align: center;
+}
+
 #href-in-grid:hover {
   color: #FF4500;
   font-weight: bold;
   transition: 1s;
   text-decoration: none;
+}
+
+#second-grid {
+  background-color: #F8F6F5;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 1px;
+  margin-top: 30px;
+  align-items: center;
 }

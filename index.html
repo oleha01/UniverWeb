@@ -4,18 +4,19 @@
 <head>
   <meta charset="utf-8">
   <title>Pocker</title>
+  <script type="text/javascript" src="handlebars-v4.1.0.js"></script>
+  <script src="index.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="style.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 
 
 <body>
-  <div class="header">
-    <p>Headerr</p>
-  </div>
+
 
 
 
@@ -68,67 +69,49 @@
     <h1 id="h1-after-header">Акції найбільшого у світі сайту онлайн-покеру</h1>
 
     <div class="gridik">
-      <div class="grid-item">
-        <a href="#" id="href-in-grid">
-          <img id="grid-img" src="im/thumb.jpg" alt="">
 
-          <h6 id="text-after-grid-img">Безкоштовні $30 за перший депозит</h6>
-        </a>
+      <script id="review-item-template" type="text/x-handlebars-template">
+        {{#each array}}
+        <div class = "grid-item" >
+          <a href = "#" id = "href-in-grid" >
+
+          <img id = "grid-img" src = "im/grid/{{ImageName}}.jpg" alt = "" >
+          <h6 id = "text-after-grid-img" > Безкоштовні $30 за перший депозит < /h6>
+          </a>
+
+</div>
+  {{/each}}
+    </script>
+    </div>
+  </div>
+  <div id="second-grid">
+    <h1 id="h1-after-header">Почати гру дуже просто</h1>
+    <div class="gridik">
+
+
+      <div class="grid-item">
+        <img id="grid-im" src="im/ss2.png" alt="">
+        <h5 class="text-h5">1.Завантажуйте</h5>
+        <h6 id="text-after-grid-img">Завантажте зручне та безпечне програмне забезпечення</h6>
       </div>
       <div class="grid-item">
-        <a href="#" id="href-in-grid">
-          <img id="grid-img" src="im/thumb (1).jpg" alt="">
-          <h6 id="text-after-grid-img">Безкоштовні $30 за перший депозит</h6>
-        </a>
+        <img id="grid-im" src="im/ss3.png" alt="">
+        <h5 class="text-h5">2.Створіть акаунт</h5>
+        <h6 id="text-after-grid-img">Проста реєстрація. Ви гратимете за лічені хвилини</h6>
       </div>
       <div class="grid-item">
-        <a href="#" id="href-in-grid">
-          <img id="grid-img" src="im/thumb (2).jpg" alt="">
-          <h6 id="text-after-grid-img">Безкоштовні $30 за перший депозит</h6>
-        </a>
-      </div>
-      <div class="grid-item">
-        <a href="#" id="href-in-grid">
-          <img id="grid-img" src="im/thumb (3).jpg" alt="">
-          <h6 id="text-after-grid-img">Безкоштовні $30 за перший депозит</h6>
-        </a>
-      </div>
-      <div class="grid-item">
-        <a href="#" id="href-in-grid">
-          <img id="grid-img" src="im/thumb (4).jpg" alt="">
-          <h6 id="text-after-grid-img">Безкоштовні $30 за перший депозит</h6>
-        </a>
-      </div>
-      <div class="grid-item">
-        <a href="#" id="href-in-grid">
-          <img id="grid-img" src="im/thumb (5).jpg" alt="">
-          <h6 id="text-after-grid-img">Безкоштовні $30 за перший депозит</h6>
-        </a>
-      </div>
-      <div class="grid-item">
-        <a href="#" id="href-in-grid">
-          <img id="grid-img" src="im/thumb (6).jpg" alt="">
-          <h6 id="text-after-grid-img">Безкоштовні $30 за перший депозит</h6>
-        </a>
-      </div>
-      <div class="grid-item">
-        <a href="#" id="href-in-grid">
-          <img id="grid-img" src="im/thumb (7).jpg" alt="">
-          <h6 id="text-after-grid-img">Безкоштовні $30 за перший депозит</h6>
-        </a>
-      </div>
-      <div class="grid-item">
-        <a href="#" id="href-in-grid">
-          <img id="grid-img" src="im/thumb (8).jpg" alt="">
-          <h6 id="text-after-grid-img">Безкоштовні $30 за перший депозит</h6>
-        </a>
+        <img id="grid-im" src="im/ss1.png" alt="">
+        <h5 class="text-h5">3.Отримайте свій бонус</h5>
+        <h6 id="text-after-grid-img">Вдосконалюйте свої навички разом із гравцями вашого рівня</h6>
       </div>
 
     </div>
   </div>
   <div class="footer">
+    Copyright В© 2017 </div>
+  <script src="index.js">
+  </script>
 
-  </div>
 </body>
 
 </html>
